@@ -5,7 +5,6 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] float currentHealth;
     [SerializeField] float maxHealth = 100;
     [SerializeField] float moveSpeed = 5f;
-
     Rigidbody rb;
     Transform target;
     Vector3 moveDirection;
@@ -29,7 +28,6 @@ public class EnemyBehaviour : MonoBehaviour
             Vector3 direction = (target.position - transform.position);
             direction.y = 0; // Keep enemy on ground level
             direction = direction.normalized;
-
             moveDirection = direction;
 
             // Rotate to face target
@@ -58,7 +56,18 @@ public class EnemyBehaviour : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    private void Die()
+    {
+        // Notify round manager that this enemy was killed
+        if (RoundManager.Instance != null)
+        {
+            RoundManager.Instance.EnemyKilled();
+        }
+
+        Destroy(gameObject);
     }
 }
