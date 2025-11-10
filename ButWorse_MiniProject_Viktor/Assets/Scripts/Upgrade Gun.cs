@@ -77,8 +77,9 @@ public class UpgradeGun : MonoBehaviour
     public void ApplyUpgrades()
     {
         if (gunController == null) return;
-        
+
         // Increase damage
+      //  RoundManager.Instance.DoMoreDamage();
        
         
     }

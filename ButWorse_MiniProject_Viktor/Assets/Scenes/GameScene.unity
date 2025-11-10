@@ -1329,7 +1329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crosshairColor: {r: 1, g: 1, b: 1, a: 1}
-  crosshairSize: 10
+  crosshairSize: 13
   crosshairThickness: 2
   crosshairGap: 5
 --- !u!4 &1525743229
