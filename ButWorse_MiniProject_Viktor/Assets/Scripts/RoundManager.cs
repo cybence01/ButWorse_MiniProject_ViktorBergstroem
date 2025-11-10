@@ -14,6 +14,8 @@ public class RoundManager : MonoBehaviour
 
     [Header("UI Settings")]
     [SerializeField] private TextMeshProUGUI roundText;
+    [SerializeField] private TextMeshProUGUI pointsText;
+    public float currentPoints;
     private int enemiesAlive = 0;
     private int enemiesToSpawn = 0;
     private bool roundActive = false;
@@ -39,6 +41,8 @@ public class RoundManager : MonoBehaviour
     {
         // Delay first round to ensure all listeners are subscribed
         Invoke(nameof(StartNewRound), 0.5f);
+
+        currentPoints = 0;
     }
 
     public void StartNewRound()
@@ -95,5 +99,11 @@ public class RoundManager : MonoBehaviour
     private void Update()
     {
         roundText.text = $"Current Round: " + currentRound;
+        pointsText.text = $"Points: " + currentPoints;
+    }
+
+    public void GivePoints()
+    {
+        currentPoints += 100;
     }
 }

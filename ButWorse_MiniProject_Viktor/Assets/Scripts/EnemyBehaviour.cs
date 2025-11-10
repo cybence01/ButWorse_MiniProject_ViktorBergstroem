@@ -8,7 +8,6 @@ public class EnemyBehaviour : MonoBehaviour
     Rigidbody rb;
     Transform target;
     Vector3 moveDirection;
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -67,6 +66,7 @@ public class EnemyBehaviour : MonoBehaviour
         {
             RoundManager.Instance.EnemyKilled();
         }
+         RoundManager.Instance.GivePoints();
 
         Destroy(gameObject);
     }
