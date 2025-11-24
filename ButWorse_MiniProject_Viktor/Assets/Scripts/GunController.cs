@@ -3,7 +3,7 @@ using UnityEngine;
 public class GunController : MonoBehaviour
 {
     [Header("Gun Settings")]
-    public float damage = 25f;
+    public float damage = 10f;
     [SerializeField] float range = 100f;
     [SerializeField] float fireRate = 0.5f; // Time between shots
     
@@ -89,10 +89,5 @@ public class GunController : MonoBehaviour
         }
     }
 
-    public void DoMoreDamage()
-    {
-        damage = +10f;
-    }
-
-   
+      
 }
