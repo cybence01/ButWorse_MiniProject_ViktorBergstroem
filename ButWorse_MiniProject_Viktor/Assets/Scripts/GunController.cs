@@ -55,7 +55,8 @@ public class GunController : MonoBehaviour
             Debug.Log($"Hit: {hit.transform.name} at distance {hit.distance}");
 
             // Check if we hit an enemy
-            EnemyBehaviour enemy = hit.transform.GetComponent<EnemyBehaviour>();
+            // GetComponentInParent checks the object hit, and then walks up the hierarchy
+            EnemyBehaviour enemy = hit.transform.GetComponentInParent<EnemyBehaviour>();    
             if (enemy != null)
             {
                 Debug.Log($"Found enemy component on {hit.transform.name}, dealing {damage} damage");
