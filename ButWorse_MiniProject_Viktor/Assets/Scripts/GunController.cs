@@ -12,11 +12,13 @@ public class GunController : MonoBehaviour
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] GameObject impactEffect;
     
+    // Track upgrade status
+    public bool isUpgraded = false; 
+
     private float nextFireTime = 0f;
 
     void Start()
     {
-        // If no camera assigned, use main camera
         if (fpsCam == null)
         {
             fpsCam = Camera.main;
@@ -25,7 +27,6 @@ public class GunController : MonoBehaviour
 
     void Update()
     {
-       // Fire on left mouseclick. Can be held down
         if (Input.GetButton("Fire1") && Time.time >= nextFireTime)
         {
             Shoot();
@@ -35,52 +36,31 @@ public class GunController : MonoBehaviour
 
     void Shoot()
     {
-        Debug.Log("Shoot() called!");
-
-        // Play muzzle flash if assigned
         if (muzzleFlash != null)
         {
             muzzleFlash.Play();
         }
 
-        // Raycast from center of screen
         RaycastHit hit;
         Vector3 rayOrigin = fpsCam.transform.position;
         Vector3 rayDirection = fpsCam.transform.forward;
         
-        Debug.Log($"Raycasting from {rayOrigin} in direction {rayDirection}");
-        
         if (Physics.Raycast(rayOrigin, rayDirection, out hit, range))
         {
-            Debug.Log($"Hit: {hit.transform.name} at distance {hit.distance}");
-
-            // Check if we hit an enemy
-            // GetComponentInParent checks the object hit, and then walks up the hierarchy
             EnemyBehaviour enemy = hit.transform.GetComponentInParent<EnemyBehaviour>();    
             if (enemy != null)
             {
-                Debug.Log($"Found enemy component on {hit.transform.name}, dealing {damage} damage");
                 enemy.TakeDamage(damage);
             }
-            else
-            {
-                Debug.Log($"No enemy component found on {hit.transform.name}");
-            }
 
-            // Spawn impact effect at hit point
             if (impactEffect != null)
             {
                 GameObject impact = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
                 Destroy(impact, 2f);
             }
         }
-        else
-        {
-            Debug.Log("Raycast hit nothing!");
-        }
     }
 
-    // Gizmo for the raycast
     void OnDrawGizmosSelected()
     {
         if (fpsCam != null)
@@ -88,7 +68,5 @@ public class GunController : MonoBehaviour
             Gizmos.color = Color.red;
             Gizmos.DrawRay(fpsCam.transform.position, fpsCam.transform.forward * range);
         }
-    }
-
-      
+    }   
 }

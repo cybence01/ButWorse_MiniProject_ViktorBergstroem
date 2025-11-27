@@ -3,9 +3,16 @@ using UnityEngine.AI;
 
 public class EnemyBehaviour : MonoBehaviour
 {
+    [Header("Stats")]
     [SerializeField] float currentHealth;
     [SerializeField] float maxHealth = 100;
     [SerializeField] float moveSpeed = 5f;
+
+    [Header("Attack Settings")]
+    [SerializeField] float attackDamage = 20f;
+    [SerializeField] float attackRange = 2f;
+    [SerializeField] float timeBetweenAttacks = 1.5f;
+    private float nextAttackTime = 0f;
 
 
     NavMeshAgent agent;
@@ -17,7 +24,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     void Start()
     {
-        target = GameObject.Find("Player").transform;
+        target = GameObject.FindGameObjectWithTag("Player").transform;
         currentHealth = maxHealth;
 
         if (agent != null)
@@ -30,8 +37,27 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (target != null)
         {
-            // 2. This single line handles pathfinding, rotation, and movement
+            // Move to target
             agent.SetDestination(target.position);
+
+            float distanceToPlayer = Vector3.Distance(transform.position, target.position);
+
+            if (distanceToPlayer <= attackRange && Time.time >= nextAttackTime)
+            {
+                AttackPlayer();
+                nextAttackTime = Time.time + timeBetweenAttacks;
+            }
+        }
+    }
+
+    void AttackPlayer()
+    {
+        PlayerHealth playerHealth = target.GetComponent<PlayerHealth>();
+
+        if (playerHealth != null)
+        {
+            playerHealth.TakeDamage(attackDamage);
+            Debug.Log("Enemy Attacked Player!");
         }
     }
 
@@ -39,10 +65,8 @@ public class EnemyBehaviour : MonoBehaviour
 
     public void TakeDamage(float damageAmount)
     {
-        Debug.Log($"Damage amount: {damageAmount}");
+       
         currentHealth -= damageAmount;
-        Debug.Log($"Health is now: {currentHealth}");
-
         if (currentHealth <= 0)
         {
             Die();
@@ -51,7 +75,6 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void Die()
     {
-        // Notify round manager that this enemy was killed
         if (RoundManager.Instance != null)
         {
             RoundManager.Instance.EnemyKilled();

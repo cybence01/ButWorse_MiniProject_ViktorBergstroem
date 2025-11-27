@@ -50,15 +50,12 @@ public class RoundManager : MonoBehaviour
         currentRound++;
         roundActive = true;
 
-        // Calculate enemies for this round (COD Zombies formula)
         enemiesToSpawn = CalculateEnemiesForRound(currentRound);
     }
 
     private int CalculateEnemiesForRound(int round)
     {
-        // Similar to COD Zombies scaling
-        // Round 1: 6 enemies
-        // Each round adds more based on scaling factor
+       
         float enemies = baseEnemiesPerRound * Mathf.Pow(1 + enemyScalingFactor, round - 1);
         return Mathf.RoundToInt(enemies);
     }
@@ -106,4 +103,6 @@ public class RoundManager : MonoBehaviour
     {
         currentPoints += 100;
     }
+
+   
 }
