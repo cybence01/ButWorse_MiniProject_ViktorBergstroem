@@ -2592,6 +2592,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4373198743433793277, guid: e8be9b65893b4734b9f7ae2c7af0c413, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4975303924606382921, guid: e8be9b65893b4734b9f7ae2c7af0c413, type: 3}
       propertyPath: m_Name
       value: Decorations
