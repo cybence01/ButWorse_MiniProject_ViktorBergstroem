@@ -606,7 +606,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4201156500855470049, guid: 8f11728a755aa5e4da1d28131638de96, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 10.7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5696019341594624277, guid: 8f11728a755aa5e4da1d28131638de96, type: 3}
       propertyPath: m_Name
@@ -626,11 +626,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8027179740017663768, guid: 8f11728a755aa5e4da1d28131638de96, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.16
+      value: 1.1588167
       objectReference: {fileID: 0}
     - target: {fileID: 8027179740017663768, guid: 8f11728a755aa5e4da1d28131638de96, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.697
+      value: -2.894
       objectReference: {fileID: 0}
     - target: {fileID: 8027179740017663768, guid: 8f11728a755aa5e4da1d28131638de96, type: 3}
       propertyPath: m_LocalPosition.y
