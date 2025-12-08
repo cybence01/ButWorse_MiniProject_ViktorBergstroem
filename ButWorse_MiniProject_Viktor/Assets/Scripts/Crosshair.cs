@@ -13,7 +13,7 @@ public class Crosshair : MonoBehaviour
     void Start()
     {
         CreateCrosshairTexture();
-        Cursor.visible = false; // Hide the default cursor
+        Cursor.visible = false; 
     }
 
     void OnGUI()
