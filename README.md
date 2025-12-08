@@ -7,7 +7,16 @@ With mouse and keyboard controls the player moves around the map, avoiding and k
 - Player - The player can use the WASD keys to move around, jump on SPACEBAR and sprint on SHIFT. The left mouse click is used to shoot.
 - Zombies - Zombies are spawned each round. They chase the player and attack once they get close - dealing 20 damage. By using a NavMesh Agent they chase the player in a satisfying way.
 - Map - The map is heavily inspired, and designed after, the original zombie map: Nacht Der Untoten. A plane acts as the floor while cubes with various scale transformations make up the walls.
-- Health - The player has 100 health points. Once the player reaches 0 health they get sent back to the main menu screen. After being hit a cooldown is starting. After the cooldown the player slowly regains health.
+- Health - The player has 100 health points. Once the player reaches 0 health they get sent back to the main menu screen. After being hit a cooldown is started. After the cooldown the player slowly regains health.
 - Rounds - The rounds act both as the goal of the game, as the player aims for the highest round possible, but also as a difficulty indicator. As the rounds increases so does the amount of zombies. This is done with this formula: 6*(1.15)^x. 6 being the base amount of zombies to spawn in. 1.15 being the scaling factor. x being the current number of rounds - 1 (because we don't want to apply the scale on the first round)
 
-- ## Game concept
+## Game features
+- The player can move around and shoot the zombies to kill them.
+- Zombies are spawned around the map, based on set points.
+- After every zombie is killed in the current round, a new round starts.
+
+## Running it
+1. Download Unity >= 6000.0.37f1
+2. Clone or download the project from Github
+3. The game requires keyboard and mouse
+
