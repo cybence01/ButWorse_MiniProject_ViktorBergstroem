@@ -13,7 +13,6 @@ public class GunController : MonoBehaviour
     [SerializeField] GameObject impactEffect;
     
     // Track upgrade status
-    public bool isUpgraded = false; 
 
     private float nextFireTime = 0f;
 

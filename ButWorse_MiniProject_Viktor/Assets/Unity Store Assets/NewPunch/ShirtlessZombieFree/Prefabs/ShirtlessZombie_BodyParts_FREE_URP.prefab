@@ -1315,6 +1315,9 @@ MonoBehaviour:
   currentHealth: 0
   maxHealth: 100
   moveSpeed: 6
+  attackDamage: 20
+  attackRange: 2
+  timeBetweenAttacks: 1.5
 --- !u!195 &5100238664497991555
 NavMeshAgent:
   m_ObjectHideFlags: 0
