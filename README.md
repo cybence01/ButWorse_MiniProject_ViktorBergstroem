@@ -59,8 +59,8 @@ https://youtu.be/HlKE8_ohWU4
 | Total time spent | 16 hours |
 
 # References
-FIRST PERSON MOVEMENT in 10 MINUTES - Unity Tutorial: https://www.youtube.com/watch?v=f473C43s8nE
-Shooting with Raycasts - Unity Tutorial: https://www.youtube.com/watch?v=THnivyG0Mvo&t
+- FIRST PERSON MOVEMENT in 10 MINUTES - Unity Tutorial: https://www.youtube.com/watch?v=f473C43s8nE
+- Shooting with Raycasts - Unity Tutorial: https://www.youtube.com/watch?v=THnivyG0Mvo&t
 
 ## AI
 - claude.ai: Used for improving scripts
