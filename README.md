@@ -15,7 +15,7 @@ With mouse and keyboard controls the player moves around the map, avoiding and k
 - Zombies are spawned around the map, based on set points.
 - After every zombie is killed in the current round, a new round starts.
 # Video link
-
+https://youtu.be/HlKE8_ohWU4
 
 # Running it
 1. Download Unity >= 6000.0.37f1
@@ -76,3 +76,4 @@ Based on my own ideas / the zombie mode the game is inspired by:
 - Add an ammunition system - As of right now the player has unlimited ammo. To increase the difficutly an ammunition system should be implemented.
 - Special enemies on every x'th round - like the Hellhounds from the original game.
 - A highscore mechanic
+- More sound implemented. Currently there is only some sound ambience I quickly created. Implementing zombie noises, gun shooting noises and walking/running noises would work great for the ambience
