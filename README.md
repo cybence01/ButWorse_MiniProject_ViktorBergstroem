@@ -30,3 +30,5 @@ With mouse and keyboard controls the player moves around the map, avoiding and k
 - MainMenu - Used to handle the Main Menu
 - PauseMenu - Used to handle the Pause menu if the player presses the ESC key
 - PlayerHealth - Holds the player's health. It handles if the player takes damage and handles the cooldown for regaining health
+- PlayerMovement - Used to move the character around with the WASD keys and looking around the the mouse
+- RoundManager - Handles the round system and calculates the amount of enemies that should be spawned in each round.
