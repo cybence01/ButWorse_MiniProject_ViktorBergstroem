@@ -14,6 +14,8 @@ With mouse and keyboard controls the player moves around the map, avoiding and k
 - The player can move around and shoot the zombies to kill them.
 - Zombies are spawned around the map, based on set points.
 - After every zombie is killed in the current round, a new round starts.
+# Video link
+
 
 # Running it
 1. Download Unity >= 6000.0.37f1
@@ -55,3 +57,11 @@ With mouse and keyboard controls the player moves around the map, avoiding and k
 | Playtesting and bugfixing | 1 hour |
 | Final touches | 1 hour |
 | Total time spent | 16 hours |
+
+# References
+FIRST PERSON MOVEMENT in 10 MINUTES - Unity Tutorial: https://www.youtube.com/watch?v=f473C43s8nE
+Shooting with Raycasts - Unity Tutorial: https://www.youtube.com/watch?v=THnivyG0Mvo&t
+
+## AI
+- claude.ai: Used for improving scripts
+- Google Gemini: USed for improving scripts and manipulating pictures of fellow students. 
