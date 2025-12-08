@@ -65,3 +65,14 @@ Shooting with Raycasts - Unity Tutorial: https://www.youtube.com/watch?v=THnivyG
 ## AI
 - claude.ai: Used for improving scripts
 - Google Gemini: USed for improving scripts and manipulating pictures of fellow students. 
+
+# Possible future additions
+Based on feedback received during the Demo Day:
+- Create a Headshot multiplier
+- Make barrels explode once they are shot
+
+Based on my own ideas / the zombie mode the game is inspired by:
+- Add an upgrade mechanic. The player should be able to spend the points they earn during the game. This can be spent on various upgrades from improving player stats to upgrading the gun
+- Add an ammunition system - As of right now the player has unlimited ammo. To increase the difficutly an ammunition system should be implemented.
+- Special enemies on every x'th round - like the Hellhounds from the original game.
+- A highscore mechanic
