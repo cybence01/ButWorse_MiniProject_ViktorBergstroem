@@ -42,3 +42,16 @@ With mouse and keyboard controls the player moves around the map, avoiding and k
 - The gun was found on the Unity Asset Store: https://assetstore.unity.com/packages/3d/props/guns/stylized-m4-assault-rifle-with-scope-complete-kit-with-gunshot-v-178197
 - The picture frames were found on the Unity Asset Store: https://assetstore.unity.com/packages/3d/props/furniture/picture-frames-301169
 - The pictures in the frame was made with Google Gemini (AI). The pictures depict fellow students dressed as WW2 generals. This was made with their consent.
+
+## Time table
+| Task  | Time Spent |
+| ------------- | ------------- |
+| Initial Setup  | 0.5 hours  |
+| Scripting Object Behaviours  | 6 hours |
+| Searching for Models and Prefabs | 2 hours |
+| Creating the map | 1.5 hours |
+| Designing the map | 3 hours |
+| UI Design | 1 Hour |
+| Playtesting and bugfixing | 1 hour |
+| Final touches | 1 hour |
+| Total time spent | 16 hours |
